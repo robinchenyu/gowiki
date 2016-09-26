@@ -1,0 +1,118 @@
+<head>
+<!--     <link href='/static/github-markdown.css' rel='stylesheet' type='text/css'> 
+    <link href='//cdnjs.cloudflare.com/ajax/libs/octicons/2.1.2/octicons.css' media='all' rel='stylesheet' type='text/css' />
+ -->
+    <link rel="stylesheet" href="/static/static/styles/atelier-estuary-dark.css">
+    <script src="/static/static/highlight.pack.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/static/bootstrap.css">
+    <script src="/static/static/jquery-3.1.0.js"></script>
+    <script src="/static/static/bootstrap.js"></script>
+    <style>
+       /* Remove the navbar's default margin-bottom and rounded borders */ 
+       .navbar {
+         margin-bottom: 0;
+         border-radius: 0;
+       }
+       
+       /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+       .row.content {height: 450px}
+       
+       /* Set gray background color and 100% height */
+       .sidenav {
+         padding-top: 20px;
+         background-color: #f1f1f1;
+         height: 100%;
+       }
+
+       table, th, td {
+          border: 1px solid black;
+          
+       }
+       
+       /* Set black background color, white text and some padding */
+       footer {
+         background-color: #555;
+         color: white;
+         padding: 15px;
+       }
+       
+       /* On small screens, set height to 'auto' for sidenav and grid */
+       @media screen and (max-width: 767px) {
+         .sidenav {
+           height: auto;
+           padding: 15px;
+         }
+         .row.content {height:auto;} 
+       }
+     </style>
+</head>
+<body class="markdown-body">
+<script type="text/javascript">
+<!-- Begin
+function enlargeImage1(img){
+    console.log("enlargeImage1: " + img.naturalWidth);
+   img.width=img.naturalWidth;
+}
+function dropImage1(img){
+    console.log("dropImage1: " + img.width);
+    img.width="50";
+}
+//  End -->
+</script>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/view/index">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+    {{ range .Links }}
+      <p><a href="{{.Url}}">{{.Name}}</a></p>
+      {{ end }}
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <h1>{{.Title}}</h1>
+      <p>{{.Body}}</p>
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p><a href="#">Up</a></p>
+</footer>
+
+
+    <div></div>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
